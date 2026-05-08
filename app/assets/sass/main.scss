@@ -1,4 +1,9 @@
+// Import BPoR branding
+@import "bpor-brand";
+
 // Import NHS.UK frontend library
 @import "nhsuk-frontend/dist/nhsuk";
 
 // Add your custom CSS/Sass styles below.
+
+@import "bpor-header-footer";

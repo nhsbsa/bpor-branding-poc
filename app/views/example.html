@@ -1,0 +1,670 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /app/views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /app/views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!--
+  Use this to set the page name which will appear at the
+  start of the <title> tag, followed by the service name.
+  This is often not needed on the homepage, where only the
+  service name is needed. You can also reuse this variable
+  within the <h1>, where they are the same.
+-->
+{% set pageName = "" %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+  <h1>NHS Design System Examples</h1>
+
+  <h2>Buttons</h2>
+
+  {{ button({ text: "Continue" }) }}
+
+  {{ button({
+    text: "Find my location",
+    classes: "nhsuk-button--secondary"
+  }) }}
+
+  {{ button({
+    text: "Delete appointment",
+    classes: "nhsuk-button--warning"
+  }) }}
+
+  <hr>
+
+  <h2>Action Link</h2>
+
+  {{ actionLink({
+    text: "Find a GP",
+    href: "/find-a-gp"
+  }) }}
+
+  <hr>
+
+  <h2>Back Link</h2>
+
+  {{ backLink({
+    href: "#",
+    text: "Go back"
+  }) }}
+
+  <hr>
+
+  <h2>Breadcrumbs</h2>
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "#",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "NHS services"
+    },
+    {
+      href: "#",
+      text: "Hospitals"
+    }
+  ]
+}) }}
+
+  <hr>
+
+  <h2>Card</h2>
+
+  {{ card({
+    heading: "Urgent care",
+    headingLevel: 2,
+    description: "Get urgent medical help"
+  }) }}
+
+  <hr>
+
+  <h2>Checkboxes</h2>
+
+  {{ checkboxes({
+    idPrefix: "conditions",
+    name: "conditions",
+    fieldset: {
+      legend: {
+        text: "Select your conditions"
+      }
+    },
+    items: [
+      {
+        value: "asthma",
+        text: "Asthma"
+      },
+      {
+        value: "diabetes",
+        text: "Diabetes"
+      }
+    ]
+  }) }}
+
+  <hr>
+
+  <h2>Details</h2>
+
+{% call details({
+  summaryText: "How to find your NHS number"
+}) %}
+  <p>An NHS number is a 10 digit number, like <span class="nhsuk-u-nowrap">{{dummyNhsNumber}}</span>.</p>
+  <p>You can find your NHS number by logging in to the NHS App or on any document the NHS has sent you, such as your:</p>
+  <ul>
+    <li>prescriptions</li>
+    <li>test results</li>
+    <li>hospital referral letters</li>
+    <li>appointment letters</li>
+  </ul>
+  <p>Ask your GP surgery for help if you cannot find your NHS number.</p>
+{% endcall %}
+
+  <hr>
+
+  <h2>Error Summary</h2>
+
+  {{ errorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Enter your NHS number",
+        href: "#nhs-number"
+      }
+    ]
+  }) }}
+
+  <hr>
+
+  <h2>Input</h2>
+
+  {{ input({
+    label: {
+      text: "NHS number"
+    },
+    id: "nhs-number",
+    name: "nhs-number"
+  }) }}
+
+  <hr>
+
+  <h2>Inset Text</h2>
+
+{% set insetTextHtml %}
+  <p>You can report any suspected side effect using the <a href="#">Yellow Card safety scheme</a>.</p>
+{% endset %}
+
+{{ insetText({
+  html: insetTextHtml
+}) }}
+
+  <hr>
+
+  <h2>Pagination</h2>
+
+  {{ pagination({
+    previousUrl: "#",
+    previousPage: "Previous",
+    nextUrl: "#",
+    nextPage: "Next"
+  }) }}
+
+  <hr>
+
+  <h2>Panel</h2>
+
+  {{ panel({
+    titleText: "Application complete",
+    HTML: "<p>Your reference number is HDJ2123F</p>"
+  }) }}
+
+  <hr>
+
+  <h2>Radios</h2>
+
+  {{ radios({
+    idPrefix: "contact",
+    name: "contact",
+    fieldset: {
+      legend: {
+        text: "How would you like to be contacted?"
+      }
+    },
+    items: [
+      {
+        value: "email",
+        text: "Email"
+      },
+      {
+        value: "phone",
+        text: "Phone"
+      }
+    ]
+  }) }}
+
+  <hr>
+
+  <h2>Select</h2>
+
+  {{ select({
+    id: "country",
+    name: "country",
+    label: {
+      text: "Select a country"
+    },
+    items: [
+      {
+        value: "england",
+        text: "England"
+      },
+      {
+        value: "scotland",
+        text: "Scotland"
+      }
+    ]
+  }) }}
+
+  <hr>
+
+  <h2>Summary List</h2>
+
+{{ summaryList({
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: "Karen Francis"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Date of birth"
+      },
+      value: {
+        text: "15 March 1984"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "date of birth"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Contact information"
+      },
+      value: {
+        html: "73 Roman Rd<br>Leeds<br> LS2 5ZN"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "contact information"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Contact details"
+      },
+      value: {
+        html: "<p>07700 900362</p><p>karen.francis@example.com</p>"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "contact details"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+  <hr>
+
+  <h2>Table</h2>
+
+{{ table({
+  caption: "Skin symptoms and possible causes",
+  head: [
+    {
+      text: "Skin symptoms"
+    },
+    {
+      text: "Possible cause"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Blisters on lips or around the mouth"
+      },
+      {
+        text: "Cold sores"
+      }
+    ],
+    [
+      {
+        text: "Itchy, dry, cracked, sore"
+      },
+      {
+        text: "Eczema"
+      }
+    ],
+    [
+      {
+        text: "Itchy blisters"
+      },
+      {
+        text: "Shingles, chickenpox"
+      }
+    ]
+  ]
+}) }}
+
+  <hr>
+
+  <h2>Tabs</h2>
+
+{% set pastDayContent %}
+  {{ table({
+    caption: "Past day",
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened",
+        format: "numeric"
+      },
+      {
+        text: "Cases closed",
+        format: "numeric"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "David Francis"
+        },
+        {
+          text: "3",
+          format: "numeric"
+        },
+        {
+          text: "0",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "Paul Farmer"
+        },
+        {
+          text: "1",
+          format: "numeric"
+        },
+        {
+          text: "0",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "Rita Patel"
+        },
+        {
+          text: "2",
+          format: "numeric"
+        },
+        {
+          text: "0",
+          format: "numeric"
+        }
+      ]
+    ]
+  }) }}
+{% endset -%}
+
+{% set pastWeekContent %}
+  {{ table({
+    caption: "Past week",
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened",
+        format: "numeric"
+      },
+      {
+        text: "Cases closed",
+        format: "numeric"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "David Francis"
+        },
+        {
+          text: "24",
+          format: "numeric"
+        },
+        {
+          text: "18",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "Paul Farmer"
+        },
+        {
+          text: "16",
+          format: "numeric"
+        },
+        {
+          text: "20",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "Rita Patel"
+        },
+        {
+          text: "24",
+          format: "numeric"
+        },
+        {
+          text: "27",
+          format: "numeric"
+        }
+      ]
+    ]
+  }) }}
+{% endset -%}
+
+{% set pastMonthContent %}
+  {{ table({
+    caption: "Past month",
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened",
+        format: "numeric"
+      },
+      {
+        text: "Cases closed",
+        format: "numeric"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "David Francis"
+        },
+        {
+          text: "98",
+          format: "numeric"
+        },
+        {
+          text: "95",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "Paul Farmer"
+        },
+        {
+          text: "122",
+          format: "numeric"
+        },
+        {
+          text: "131",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "Rita Patel"
+        },
+        {
+          text: "126",
+          format: "numeric"
+        },
+        {
+          text: "142",
+          format: "numeric"
+        }
+      ]
+    ]
+  }) }}
+{% endset -%}
+
+{% set pastYearContent %}
+  {{ table({
+    caption: "Past year",
+    head: [
+      {
+        text: "Case manager"
+      },
+      {
+        text: "Cases opened",
+        format: "numeric"
+      },
+      {
+        text: "Cases closed",
+        format: "numeric"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "David Francis"
+        },
+        {
+          text: "1380",
+          format: "numeric"
+        },
+        {
+          text: "1472",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "Paul Farmer"
+        },
+        {
+          text: "1129",
+          format: "numeric"
+        },
+        {
+          text: "1083",
+          format: "numeric"
+        }
+      ],
+      [
+        {
+          text: "Rita Patel"
+        },
+        {
+          text: "1539",
+          format: "numeric"
+        },
+        {
+          text: "1265",
+          format: "numeric"
+        }
+      ]
+    ]
+  }) }}
+{% endset -%}
+{{ tabs({
+  items: [
+  {
+    label: "Past day",
+    id: "past-day",
+    panel: {
+      html: pastDayContent
+      }
+    },
+    {
+      label: "Past week",
+      id: "past-week",
+      panel: {
+        html: pastWeekContent
+      }
+    },
+    {
+      label: "Past month",
+      id: "past-month",
+      panel: {
+        html: pastMonthContent
+      }
+    },
+    {
+      label: "Past year",
+      id: "past-year",
+      panel: {
+        html: pastYearContent
+      }
+    }
+  ]
+}) }}
+
+  <hr>
+
+  <h2>Tag</h2>
+
+  {{ tag({
+    text: "Active"
+  }) }}
+
+  <hr>
+
+  <h2>Textarea</h2>
+
+  {{ textarea({
+    name: "comments",
+    id: "comments",
+    label: {
+      text: "Additional information"
+    }
+  }) }}
+
+  <hr>
+
+  <h2>Warning Callout</h2>
+
+{{ warningCallout({
+  heading: "School, nursery or work",
+  text: "Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared."
+}) }}
+        
+    </div>
+  </div>
+{% endblock %}

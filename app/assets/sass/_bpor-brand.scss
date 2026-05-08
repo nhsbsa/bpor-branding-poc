@@ -1,0 +1,29 @@
+// Set BPoR styles
+
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+$nihr-font-family: "Inclusive Sans", Arial, sans-serif;
+$nihr-brand-colour: #193E72;
+$nihr-border-colour: black;
+$nihr-input-border-colour: black;
+$nihr-focus-text-colour: black;
+$nihr-focus-colour: #FFDD00;
+
+// Overwrite NHS variables
+
+$nhsuk-font-family: $nihr-font-family;
+$nhsuk-brand-colour: $nihr-brand-colour;
+$nhsuk-border-colour: $nihr-border-colour;
+$nhsuk-input-border-colour: $nihr-input-border-colour;
+$nhsuk-focus-text-colour: $nihr-focus-text-colour;
+$nhsuk-focus-colour: $nihr-focus-colour;
+
+// Custom overwrites
+
+html {
+    font-family: $nhsuk-font-family;
+}
+
+.nhsuk-details__text {
+    border-left: 4px solid #5A5555 !important;
+}
