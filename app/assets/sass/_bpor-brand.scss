@@ -2,23 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
 
-$nihr-font-family: "Inclusive Sans", Arial, sans-serif;
-$nihr-brand-colour: #193E72;
-$nihr-border-colour: black;
-$nihr-input-border-colour: black;
-$nihr-focus-text-colour: black;
-$nihr-focus-colour: #FFDD00;
+$bpor-font-family: "Inclusive Sans", Arial, sans-serif;
+$bpor-brand-colour: #193E72;
+$bpor-border-colour: black;
+$bpor-input-border-colour: black;
+$bpor-focus-text-colour: black;
+$bpor-focus-colour: #FFDD00;
 
 // Overwrite NHS variables
 
-$nhsuk-font-family: $nihr-font-family;
-$nhsuk-brand-colour: $nihr-brand-colour;
-$nhsuk-border-colour: $nihr-border-colour;
-$nhsuk-input-border-colour: $nihr-input-border-colour;
-$nhsuk-focus-text-colour: $nihr-focus-text-colour;
-$nhsuk-focus-colour: $nihr-focus-colour;
+$nhsuk-font-family: $bpor-font-family;
+$nhsuk-brand-colour: $bpor-brand-colour;
+$nhsuk-border-colour: $bpor-border-colour;
+$nhsuk-input-border-colour: $bpor-input-border-colour;
+$nhsuk-focus-text-colour: $bpor-focus-text-colour;
+$nhsuk-focus-colour: $bpor-focus-colour;
 
-$nhsuk-button-colour: $nihr-brand-colour;
+$nhsuk-button-colour: $bpor-brand-colour;
 
 
 
