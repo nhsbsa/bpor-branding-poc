@@ -1,0 +1,586 @@
+{% extends 'layout.html' %}
+
+{% set pageName = "Buttons" %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        text: "NHS.UK frontend",
+        href: baseUrl
+      },
+      {
+        text: "Examples",
+        href: baseUrl ~ "#examples"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <section class="nhsuk-main-wrapper nhsuk-main-wrapper--s">
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h1 class="nhsuk-heading-xl">{{ pageName }}</h1>
+          <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Page background</h2>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Button element</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Save and continue"
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning"
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login"
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Link element</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Save and continue",
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              href: "#"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Disabled</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Save and continue",
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              disabled: true
+            }) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Save and continue",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              small: true
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Save and continue",
+              small: true,
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              small: true,
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              small: true,
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              small: true,
+              href: "#"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Save and continue",
+              small: true,
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              small: true,
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              small: true,
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              small: true,
+              disabled: true
+            }) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nhsuk-main-wrapper app-wrapper app-wrapper--background-white">
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">White background</h2>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Button element</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Save and continue"
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning"
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login"
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Link element</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Save and continue",
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              href: "#"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Disabled</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Save and continue",
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              disabled: true
+            }) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Save and continue",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              small: true
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Save and continue",
+              small: true,
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              small: true,
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              small: true,
+              href: "#"
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              small: true,
+              href: "#"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Save and continue",
+              small: true,
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Yes, delete this vaccine",
+              variant: "warning",
+              small: true,
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              small: true,
+              disabled: true
+            }) }}
+
+            {{ button({
+              text: "Find my location",
+              variant: "secondary",
+              small: true,
+              disabled: true
+            }) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nhsuk-main-wrapper app-wrapper app-wrapper--background-grey">
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Grey background (used in footer)</h2>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Button element</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Find my location",
+              variant: "secondary-solid"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Link element</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Find my location",
+              variant: "secondary-solid",
+              href: "#"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Disabled</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Find my location",
+              variant: "secondary-solid",
+              disabled: true
+            }) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Find my location",
+              variant: "secondary-solid",
+              small: true
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Find my location",
+              variant: "secondary-solid",
+              small: true,
+              href: "#"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Find my location",
+              variant: "secondary-solid",
+              small: true,
+              disabled: true
+            }) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nhsuk-main-wrapper app-wrapper app-wrapper--background-blue">
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-0">Blue background (used in hero)</h2>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Button element</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Log out",
+              variant: "reverse",
+              small: true
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Link element</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Log out",
+              href: "#",
+              variant: "reverse",
+              small: true
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <p class="nhsuk-body nhsuk-u-margin-top-6">Disabled</p>
+
+          <div class="nhsuk-button-group nhsuk-u-margin-bottom-0">
+            {{ button({
+              text: "Log out",
+              variant: "reverse",
+              small: true,
+              disabled: true
+            }) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Log out",
+              variant: "reverse",
+              small: true
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Log out",
+              variant: "reverse",
+              small: true,
+              href: "#"
+            }) }}
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-one-third">
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Log out",
+              variant: "reverse",
+              small: true,
+              disabled: true
+            }) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

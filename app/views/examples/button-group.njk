@@ -1,0 +1,340 @@
+{% extends 'layout.html' %}
+
+{% set pageName = "Button group" %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        text: "NHS.UK frontend",
+        href: baseUrl
+      },
+      {
+        text: "Examples",
+        href: baseUrl ~ "#examples"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <section class="nhsuk-main-wrapper nhsuk-main-wrapper--s">
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h1 class="nhsuk-heading-xl">{{ pageName }}</h1>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "I'm OK with analytics cookies"
+            }) }}
+
+            {{ button({
+              text: "Do not use analytics cookies"
+            }) }}
+
+            <a href="#" class="nhsuk-link">Read more about our cookies</a>
+          </div>
+
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group nhsuk-button-group--small">
+            {{ button({
+              text: "I'm OK with analytics cookies",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Do not use analytics cookies",
+              small: true
+            }) }}
+
+            <a href="#" class="nhsuk-link">Read more about our cookies</a>
+          </div>
+
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Delete account",
+              variant: "warning"
+            }) }}
+
+            <a href="#" class="nhsuk-link">Cancel</a>
+            <a href="#" class="nhsuk-link">Cancel and go back</a>
+          </div>
+
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group nhsuk-button-group--small">
+            {{ button({
+              text: "Delete account",
+              variant: "warning",
+              small: true
+            }) }}
+
+            <a href="#" class="nhsuk-link">Cancel</a>
+            <a href="#" class="nhsuk-link">Cancel and go back</a>
+          </div>
+
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            <a href="#" class="nhsuk-link">Buy it</a>
+
+            {{ button({
+              text: "Use it"
+            }) }}
+
+            {{ button({
+              text: "Break it"
+            }) }}
+
+            <a href="#" class="nhsuk-link">Fix it</a>
+            <a href="#" class="nhsuk-link">Trash it</a>
+            <a href="#" class="nhsuk-link">Change it</a>
+
+            {{ button({
+              text: "Mail it"
+            }) }}
+
+            <a href="#" class="nhsuk-link">Upgrade it</a>
+
+            <a href="#" class="nhsuk-link">Charge it</a>
+
+            {{ button({
+              text: "Point it",
+              variant: "secondary"
+            }) }}
+
+            {{ button({
+              text: "Zoom it",
+              variant: "secondary"
+            }) }}
+
+            {{ button({
+              text: "Press it",
+              variant: "secondary"
+            }) }}
+          </div>
+
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group nhsuk-button-group--small">
+            <a href="#" class="nhsuk-link">Buy it</a>
+
+            {{ button({
+              text: "Use it",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Break it",
+              small: true
+            }) }}
+
+            <a href="#" class="nhsuk-link">Fix it</a>
+            <a href="#" class="nhsuk-link">Trash it</a>
+            <a href="#" class="nhsuk-link">Change it</a>
+
+            {{ button({
+              text: "Mail it",
+              small: true
+            }) }}
+
+            <a href="#" class="nhsuk-link">Upgrade it</a>
+
+            <a href="#" class="nhsuk-link">Charge it</a>
+
+            {{ button({
+              text: "Point it",
+              variant: "secondary",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Zoom it",
+              variant: "secondary",
+              small: true
+            }) }}
+
+            {{ button({
+              text: "Press it",
+              variant: "secondary",
+              small: true
+            }) }}
+          </div>
+
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group">
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              href: "#"
+            }) }}
+
+            <a href="#" class="nhsuk-link">Create an account</a>
+          </div>
+
+
+          <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+          <div class="nhsuk-button-group nhsuk-button-group--small">
+            {{ button({
+              text: "Continue to NHS login",
+              variant: "login",
+              small: true,
+              href: "#"
+            }) }}
+
+            <a href="#" class="nhsuk-link">Create an account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nhsuk-main-wrapper app-wrapper app-wrapper--background-grey">
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-button-group">
+        {{ button({
+          text: "Breast cancer",
+          variant: "secondary-solid"
+        }) }}
+
+        {{ button({
+          text: "Implanted medical device",
+          variant: "secondary-solid"
+        }) }}
+
+        {{ button({
+          text: "Breast implants or augmentation",
+          variant: "secondary-solid"
+        }) }}
+
+        {{ button({
+          text: "Mastectomy or lumpectomy",
+          variant: "secondary-solid"
+        }) }}
+
+        {{ button({
+          text: "Cysts",
+          variant: "secondary-solid"
+        }) }}
+
+        {{ button({
+          text: "Benign lumps",
+          variant: "secondary-solid"
+        }) }}
+
+        {{ button({
+          text: "Other procedures",
+          variant: "secondary-solid"
+        }) }}
+      </div>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+      <div class="nhsuk-button-group nhsuk-button-group--small">
+        {{ button({
+          text: "Breast cancer",
+          variant: "secondary-solid",
+          small: true
+        }) }}
+
+        {{ button({
+          text: "Implanted medical device",
+          variant: "secondary-solid",
+          small: true
+        }) }}
+
+        {{ button({
+          text: "Breast implants or augmentation",
+          variant: "secondary-solid",
+          small: true
+        }) }}
+
+        {{ button({
+          text: "Mastectomy or lumpectomy",
+          variant: "secondary-solid",
+          small: true
+        }) }}
+
+        {{ button({
+          text: "Cysts",
+          variant: "secondary-solid",
+          small: true
+        }) }}
+
+        {{ button({
+          text: "Benign lumps",
+          variant: "secondary-solid",
+          small: true
+        }) }}
+
+        {{ button({
+          text: "Other procedures",
+          variant: "secondary-solid",
+          small: true
+        }) }}
+      </div>
+
+    </div>
+  </section>
+
+  <section class="nhsuk-main-wrapper app-wrapper app-wrapper--background-blue">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-button-group">
+        {{ button({
+          text: "Continue to NHS login",
+          variant: "reverse",
+          href: "#"
+        }) }}
+
+        <p class="nhsuk-body">alternatively you can <a href="#" class="nhsuk-link nhsuk-link--reverse">register for a new account here</a></p>
+      </div>
+
+      <div class="nhsuk-button-group">
+        {{ button({
+          text: "Register now",
+          variant: "reverse",
+          href: "#"
+        }) }}
+
+        <p class="nhsuk-body">It's free</p>
+      </div>
+
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">
+
+      <div class="nhsuk-button-group nhsuk-button-group--small">
+        {{ button({
+          text: "Continue to NHS login",
+          variant: "reverse",
+          small: true,
+          href: "#"
+        }) }}
+
+        <p class="nhsuk-body-s">alternatively you can <a href="#" class="nhsuk-link nhsuk-link--reverse">register for a new account here</a></p>
+      </div>
+
+      <div class="nhsuk-button-group nhsuk-button-group--small">
+        {{ button({
+          text: "Register now",
+          variant: "reverse",
+          small: true,
+          href: "#"
+        }) }}
+
+        <p class="nhsuk-body-s">It's free</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
